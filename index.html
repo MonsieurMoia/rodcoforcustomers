@@ -1,41 +1,49 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="customerapp">
 <head>
 	<meta charset="UTF-8">
-	<title>Bootstrap Template</title>
+	<title>RODCO COMPRAS</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 	<link href="_/css/bootstrap.css" rel="stylesheet" media="screen">
 	<link href="_/css/mystyles.css" rel="stylesheet" media="screen">
+	<script src="http://code.angularjs.org/1.1.4/angular.js"></script>
 </head>
-<body>
+<body id="home">
 
 	<div class="row">
 		<header class="header col-lg-12">
 			<nav class="navbar navbar-default" role="navigation">
-
-				<a class="navbar-brand" href="#">RODCO DIGITAL</a>
-			
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">RODCO Compras</a>
+				</div>
+	
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse navbar-ex1-collapse">
-					<ul class="nav navbar-nav">
-						<li><a href="#">1 Productos</a></li>
-						<li><a href="#">2 Registro</a></li>
+					<ul class="nav navbar-nav ">
+						<li><a href="#">1 Seleccione Productos</a></li>
+						<li class="disabled"><a href="#">2 Seleccione su Envío</a></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#">Link</a></li>
+						<li><a href="#">Iniciar Sesión</a></li>
 					</ul>
 				</div><!-- /.navbar-collapse -->
 			</nav>
 		</header><!-- header -->
 	</div><!-- row -->
 
-	<div id="mainContainer">
-
-	</div>
-
-	
+	<div class="row">
+		<ng-view ng-animate="{enter: 'enter', leave: 'leave'}"></ng-view>
+			
+		</div><!-- view -->
+	</div><!-- row -->
 	<script src="_/js/bootstrap.js"></script>
-	
 	<script src="_/js/myscript.js"></script>
 </body>
 </html>
