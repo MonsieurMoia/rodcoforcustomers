@@ -54,6 +54,48 @@ function searchProductsController($scope){
 			image:'http://lorempixel.com/400/200',
 			price: 6700.00,
 			active: false	
+		},
+		{
+			name: 'CIERRA PUERTA YALE 1002 SB',
+			image:'http://lorempixel.com/400/200',
+			price: 9050.00,
+			active: false	
+		},
+		{
+			name: 'DISCO HILCO CORTE METAL 9" x 3/32',
+			image:'http://lorempixel.com/400/200',
+			price: 1356.00,
+			active: false	
+		},
+		{
+			name: 'SOLDADURA HILCO BRONCE 1/16.',
+			image:'http://lorempixel.com/400/200',
+			price: 14551.00,
+			active: false	
+		},
+		{
+			name: 'SOLDADURA HILCO MIG 0.8mm AL VACIO 5 KG',
+			image:'http://lorempixel.com/400/200',
+			price: 7824.00,
+			active: false	
+		},
+		{
+			name: 'MASCARA HILCO SOLDAR ELECTRONICA',
+			image:'http://lorempixel.com/400/200',
+			price: 97778.00,
+			active: false	
+		},
+		{
+			name: 'LLAVE DE CONTROL PLOMER ANGULAR 1/2 x 1/2',
+			image:'http://lorempixel.com/400/200',
+			price: 2265.00,
+			active: false	
+		},
+		{
+			name: 'FILTRO COFLEX P/FREGADERO WF 600',
+			image:'http://lorempixel.com/400/200',
+			price: 6000.00,
+			active: false	
 		}
 
 	];
