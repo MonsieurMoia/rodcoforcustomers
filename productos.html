@@ -9,7 +9,7 @@
 			<form action="" method="POST" class="form-inline" role="form">
 				<div class="form-group">
 					<label class="sr-only" for="">label</label>
-					<input type="text" class="form-control" id="" placeholder="" ng-model="searchstr" >
+					<input type="text" class="form-control" id="" placeholder="Ej: Candados" ng-model="search" >
 				</div>
 				<button type="submit" class="btn btn-primary">Buscar</button>
 			</form>
@@ -30,12 +30,12 @@
 	
 	<div class="row">
 		<section class="products-container col-lg-12 ">
-			<div class="" style="width:20%; display:inline-block" ng-repeat="product in products | filter:searchstr" ng-animate="{enter: 'enter', leave: 'leave'}">
+			<div class="product-article col-lg-3 col-md-4 col-sm-6 col-xs-6" style="" ng-repeat="product in products | filter:search" ng-animate="{enter: 'enter', leave: 'leave'}" ng-click="toggleActive(product)" ng-class="{active:product.active}">
     			<div class="product thumbnail">
     			  <img ng-src="{{product.image}}" alt="">
     			  <div class="caption">
     			    <h4>{{product.name}}</h4>
-    			    <p><span>Precio: C</span>{{product.price}}</p>
+    			    <p><span>Precio: C</span>{{product.price | currency}}</p>
  			    </div>
  			  </div>
  			</div>
@@ -45,7 +45,7 @@
  
 
 	<section class="price-container col-lg-12">
-		<a href="#confirmarorden" class="btn btn-primary btn-block btn-lg">TOTAL: C0</a>
+		<a href="#confirmarorden" class="btn btn-primary btn-block btn-lg">TOTAL: {{total() | currency}}</a>
 	</section>
 
 </section>

@@ -25,15 +25,21 @@
 	margin-bottom: 20px;
 	.products-container {
 		margin-top: 20px;
-		.product {
-			border-bottom: 2px solid #ccc;
-			&:hover {
-				position: relative;
-				background: #3276b1;
+		.product-article {
+			float: none;
+			display: inline-block;
+			&.active {
+				.thumbnail {
+					background: #3276b1;
+					border-top: 2px solid #ccc;
+					border-bottom: inherit;
+					.caption{
+						color: #fff;
+					}
+				}
+			}
+			.thumbnail {
 				cursor: pointer;
-				.caption{
-					color: #fff;
-				}	
 			}
 		}
 	}

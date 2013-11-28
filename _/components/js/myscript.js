@@ -34,23 +34,45 @@ function searchProductsController($scope){
 		{
 			name: 'CANDADOS YALE 11840 VISUAL BLISTER',
 			image:'http://lorempixel.com/400/200',
-			price: '3,201.00'
+			price: 3201.00,
+			active: false	
 		},
 		{
 			name: 'CANDADO YALE ITALIANO 11360 ESPIGA LARGA',
 			image:'http://lorempixel.com/400/200',
-			price: '7,850.00'
+			price: 7850.00,
+			active: false	
 		},
 		{
 			name: 'CERRADURA YALE AUTOMOVIL 49016',
 			image:'http://lorempixel.com/400/200',
-			price: '3,500.00'
+			price: 3500.00,
+			active: false	
 		},
 		{
 			name: 'CERRADURA YALE AUTOMOVIL 89520C',
 			image:'http://lorempixel.com/400/200',
-			price: '6,700.00'
+			price: 6700.00,
+			active: false	
 		}
 
 	];
+	$scope.toggleActive = function(s){
+		s.active = !s.active;
+	};
+	$scope.total = function(){
+
+		var total = 0;
+
+		// Use the angular forEach helper method to
+		// loop through the services array:
+
+		angular.forEach($scope.products, function(s){
+			if (s.active){
+				total+= s.price;
+			}
+		});
+
+		return total;
+	};
 }
