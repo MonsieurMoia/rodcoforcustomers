@@ -30,7 +30,9 @@
 	
 	<div class="row">
 		<section class="products-container col-lg-12 ">
+			
 			<div class="product-article col-lg-3 col-md-4 col-sm-6 col-xs-6" ng-repeat="product in products | filter:search" ng-animate="{enter: 'enter', leave: 'leave'}" ng-click="toggleActive(product)" ng-class="{active:product.active}">
+
     			<div class="product thumbnail">
     			  <img ng-src="{{product.image}}" alt="">
     			  <div class="caption">
