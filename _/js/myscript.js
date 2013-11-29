@@ -28,8 +28,9 @@ customerapp.controller('productosController', function($scope) {
 customerapp.controller('confirmarordenController', function($scope) {
 
 });
-
-function searchProductsController($scope){
+//Function for Dynamic Searching and Selecting Products
+function productsController($scope){
+	//List of Products
 	$scope.products = [
 		{
 			name: 'CANDADOS YALE 11840 VISUAL BLISTER',
